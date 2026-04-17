@@ -5,7 +5,7 @@ import tensorflow as tf
 import joblib
 
 # Load the saved model and scaler
-model = tf.keras.models.load_model('churn_model.h5')
+model = tf.keras.models.load_model('churn_model.h5', compile=False)
 sc = joblib.load('scaler.joblib')
 
 st.set_page_config(page_title="Churn Predictor", layout="centered")
